@@ -11,45 +11,438 @@
 
 <header class="page-header">
     <h1>Voices to Elevate</h1>
-    <p>Indigenous creators sharing language and culture</p>
+    <p>Interactive creator map and profiles for Indigenous language revitalization</p>
 </header>
 
 <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="call.html">Call to Action</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="research.html">Research</a>
-    <a href="voices.html">Voices</a>
-    <a href="creator.html">Creator</a>
+    <a href="index.html" data-section="Start">Home</a>
+    <a href="call.html" data-section="TRC #14">Call to Action</a>
+    <a href="research.html" data-section="Evidence">Research</a>
+    <a href="voices.html#creator-map" data-section="Map + creators" aria-current="page">Voices</a>
 </nav>
 
 <main>
 
-<section class="card">
-    <h2>Crystal Harrison Collin</h2>
-    <p>Teaches Anishinaabemowin through short TikTok lessons.</p>
-</section>
+    <section class="kpi-grid survival-kpis" aria-label="Language risk and preservation impact metrics">
+        <article class="kpi-card risk-card">
+            <span class="kpi-number">22</span>
+            <span class="kpi-label">Languages at Risk</span>
+        </article>
+        <article class="kpi-card critical-card">
+            <span class="kpi-number">3</span>
+            <span class="kpi-label">Languages With Fewer Than 100 Speakers</span>
+        </article>
+        <article class="kpi-card risk-card">
+            <span class="kpi-number">67%</span>
+            <span class="kpi-label">Fluent Speakers Over 65</span>
+        </article>
+        <article class="kpi-card hope-card">
+            <span class="kpi-number">8,426</span>
+            <span class="kpi-label">Words Saved From Being Lost</span>
+        </article>
+        <article class="kpi-card hope-card">
+            <span class="kpi-number">3,102</span>
+            <span class="kpi-label">Hours of Elder Knowledge Preserved</span>
+        </article>
+        <article class="kpi-card hope-card">
+            <span class="kpi-number">245</span>
+            <span class="kpi-label">Communities Protecting Their Language</span>
+        </article>
+    </section>
 
-<section class="card">
-    <h2>Myia Antone</h2>
-    <p>Focuses on youth involvement and cultural identity.</p>
-</section>
+    <section class="map-intro" id="creator-map">
+        <h2>Map the Voices</h2>
+        <p>
+            Select an approximate regional marker or card to focus on one voice. Use the
+            filters to compare how different creators teach language, identity, culture,
+            and community.
+        </p>
+    </section>
 
-<section class="card">
-    <h2>Shina Nova</h2>
-    <p>Shares Inuit language and culture through social media.</p>
-</section>
+    <section class="interactive-voices" aria-label="Interactive Indigenous creator map and profile cards">
+        <div class="map-container">
+            <div class="map-outline"></div>
 
-<section class="card">
-    <h2>Grandma Sherry</h2>
-    <p>Combines storytelling, cooking, and traditional teachings.</p>
-</section>
+            <button class="dot crystal is-active" type="button" data-voice="crystal" aria-label="Select Crystal Harrison Collin">
+                <span class="tooltip">
+                    <b>Crystal Harrison Collin</b><br>
+                    Ontario / Great Lakes region. Anishinaabemowin lessons connected to family and daily life.
+                </span>
+            </button>
+
+            <button class="dot myia" type="button" data-voice="myia" aria-label="Select Myia Antone">
+                <span class="tooltip">
+                    <b>Myia Antone</b><br>
+                    B.C. coast region. Identity, youth empowerment, and cultural knowledge.
+                </span>
+            </button>
+
+            <button class="dot shina" type="button" data-voice="shina" aria-label="Select Shina Nova">
+                <span class="tooltip">
+                    <b>Shina Nova</b><br>
+                    Northern Quebec / Inuit region. Inuit culture and language through digital platforms.
+                </span>
+            </button>
+
+            <button class="dot grandma" type="button" data-voice="grandma" aria-label="Select Grandma Sherry">
+                <span class="tooltip">
+                    <b>Grandma Sherry</b><br>
+                    Central / Prairie region. Storytelling, cooking, and everyday language learning.
+                </span>
+            </button>
+
+            <div class="map-label" id="mapStatus">
+                Approximate regional markers. Selected: Crystal Harrison Collin
+            </div>
+        </div>
+
+        <aside class="voice-focus" aria-live="polite">
+            <p class="eyebrow">Selected Voice</p>
+            <h2 id="focusName">Crystal Harrison Collin</h2>
+            <p id="focusLocation">Ontario / Great Lakes region | Anishinaabemowin</p>
+            <p id="focusText">
+                Short social media language lessons make Anishinaabemowin easier to hear,
+                practise, and connect with everyday life.
+            </p>
+            <div class="voice-focus-stats">
+                <span><b id="focusRisk">Revitalizing</b> Risk Level</span>
+                <span><b id="focusMethod">Short Videos</b> Teaching Method</span>
+                <span><b id="focusImpact">Family Learning</b> Community Impact</span>
+            </div>
+            <a id="focusLink" class="btn" href="#voice-crystal">Jump to Voice Card</a>
+        </aside>
+    </section>
+
+    <section class="dashboard-row" aria-label="Preservation dashboard highlights">
+
+        <!-- Featured Language (now fills the row alone) -->
+        <article class="dashboard-panel language-day">
+
+        <!-- 左侧内容 -->
+        <div class="language-content">
+            <p class="eyebrow">Featured Language</p>
+            <h2>Ojibwe</h2>
+
+            <p class="language-word">Boozhoo</p>
+            <p>Hello</p>
+
+            <!-- Audio element -->
+            <audio id="audioPlayer">
+            <source src="boozhoo.mp3" type="audio/mpeg">
+            </audio>
+
+            <!-- Button -->
+            <button class="btn audio-btn" type="button" id="audioButton">
+            Play Audio
+            </button>
+
+            <p class="audio-status" id="audioStatus">
+            Ready to listen and practise pronunciation
+            </p>
+        </div>
+
+        <!-- 右侧波浪 -->
+        <div class="audio-wave" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        </article>
+
+        </section>
+
+        <script>
+        const button = document.getElementById("audioButton");
+        const audio = document.getElementById("audioPlayer");
+        const status = document.getElementById("audioStatus");
+
+        button.addEventListener("click", () => {
+            audio.play();
+            status.textContent = "Playing pronunciation...";
+        });
+
+        audio.addEventListener("ended", () => {
+            status.textContent = "Ready to listen and practise pronunciation";
+        });
+        </script>
+        
+
+    <section class="filter-panel" aria-label="Voice filters">
+        <button class="filter-btn is-active" type="button" data-filter="all">All Voices</button>
+        <button class="filter-btn" type="button" data-filter="language">Language Lessons</button>
+        <button class="filter-btn" type="button" data-filter="identity">Identity</button>
+        <button class="filter-btn" type="button" data-filter="digital">Digital Media</button>
+        <button class="filter-btn" type="button" data-filter="elders">Elders</button>
+    </section>
+
+    <div class="voices-grid">
+
+        <article class="voice-card is-selected" id="voice-crystal" data-voice="crystal" data-tags="language digital identity">
+            <button class="voice-card-main" type="button" data-voice="crystal">
+                <span>
+                    <span class="eyebrow">TikTok and Instagram</span>
+                    <span class="voice-title">Crystal Harrison Collin</span>
+                    <span class="voice-location">Ontario / Great Lakes region | Anishinaabemowin</span>
+                </span>
+                <span class="select-label">Select</span>
+            </button>
+
+            <p>
+                Teaches Anishinaabemowin through short, accessible language lessons
+                focused on everyday words and pronunciation.
+            </p>
+
+            <details open>
+                <summary>Key ideas and strategies</summary>
+                <ul>
+                    <li>Indigenous languages are living and used daily.</li>
+                    <li>Learning can happen one word or phrase at a time.</li>
+                    <li>Short videos make language learning easier to return to.</li>
+                </ul>
+            </details>
+
+            <div class="media-box">
+                <a href="https://www.tiktok.com/@crystalharrisoncollin" target="_blank" rel="noopener noreferrer">
+                    View TikTok Profile
+                </a>
+            </div>
+        </article>
+
+        <article class="voice-card" id="voice-myia" data-voice="myia" data-tags="language identity">
+            <button class="voice-card-main" type="button" data-voice="myia">
+                <span>
+                    <span class="eyebrow">Public education</span>
+                    <span class="voice-title">Myia Antone</span>
+                    <span class="voice-location">B.C. coast region | the Squamish language</span>
+                </span>
+                <span class="select-label">Select</span>
+            </button>
+
+            <p>
+                Focuses on Indigenous identity, youth empowerment, and language preservation.
+            </p>
+
+            <details>
+                <summary>Key ideas and strategies</summary>
+                <ul>
+                    <li>Language is closely connected to identity.</li>
+                    <li>Youth are key to long-term revitalization.</li>
+                    <li>Workshops and public speaking can build awareness.</li>
+                </ul>
+            </details>
+
+            <div class="media-box">
+                <p>Community workshops and public speaking events</p>
+            </div>
+        </article>
+
+        <article class="voice-card" id="voice-shina" data-voice="shina" data-tags="language digital identity">
+            <button class="voice-card-main" type="button" data-voice="shina">
+                <span>
+                    <span class="eyebrow">Video creator</span>
+                    <span class="voice-title">Shina Nova</span>
+                    <span class="voice-location">Northern Quebec / Inuit region | Inuit culture and language</span>
+                </span>
+                <span class="select-label">Select</span>
+            </button>
+
+            <p>
+                Shares Inuit culture and language through modern social media platforms.
+            </p>
+
+            <details>
+                <summary>Key ideas and strategies</summary>
+                <ul>
+                    <li>Digital storytelling can reach people across distance.</li>
+                    <li>Culture and language are strengthened through visibility.</li>
+                    <li>Social media can create pride and curiosity.</li>
+                </ul>
+            </details>
+
+            <div class="media-box">
+                <p>TikTok and video content about Inuit culture and language</p>
+            </div>
+        </article>
+
+        <article class="voice-card" id="voice-grandma" data-voice="grandma" data-tags="language elders identity">
+            <button class="voice-card-main" type="button" data-voice="grandma">
+                <span>
+                    <span class="eyebrow">Storytelling and teaching</span>
+                    <span class="voice-title">Grandma Sherry</span>
+                    <span class="voice-location">Central / Prairie region | the Dakota language</span>
+                </span>
+                <span class="select-label">Select</span>
+            </button>
+
+            <p>
+                Combines storytelling, cooking, and language learning in everyday life.
+            </p>
+
+            <details>
+                <summary>Key ideas and strategies</summary>
+                <ul>
+                    <li>Elders are important knowledge keepers.</li>
+                    <li>Language is part of home, food, family, and routine.</li>
+                    <li>Demonstrations make cultural knowledge feel personal.</li>
+                </ul>
+            </details>
+
+            <div class="media-box">
+                <p>Cooking demonstrations and storytelling videos</p>
+            </div>
+        </article>
+
+    </div>
+
+    <section class="ranking-grid" aria-label="Community contribution rankings">
+        <article class="ranking-card">
+            <span>Top Community</span>
+            <strong>Anishinaabe Learners</strong>
+            <p>312 contributions</p>
+        </article>
+        <article class="ranking-card">
+            <span>Top Content Type</span>
+            <strong>Short Language Lessons</strong>
+            <p>Most shared format</p>
+        </article>
+        <article class="ranking-card">
+            <span>Upcoming Event</span>
+            <strong>Storytelling Circle</strong>
+            <p>Community learning night</p>
+        </article>
+    </section>
+
+    <section class="card highlight-box">
+        <h2>Connection to Call to Action #14</h2>
+        <p>
+            These voices show that Indigenous language revitalization is community-led,
+            creative, and active today. Their work supports the goal of preserving,
+            strengthening, and celebrating Indigenous languages across Canada.
+        </p>
+    </section>
 
 </main>
 
 <footer>
     <p>TRC Call to Action #14 Awareness Project</p>
 </footer>
+
+<script>
+const voiceData = {
+    crystal: {
+        name: "Crystal Harrison Collin",
+        location: "Ontario / Great Lakes region | Anishinaabemowin",
+        text: "Short social media language lessons make Anishinaabemowin easier to hear, practise, and connect with everyday life.",
+        link: "#voice-crystal",
+        risk: "Revitalizing",
+        method: "Short Videos",
+        impact: "Family Learning"
+    },
+    myia: {
+        name: "Myia Antone",
+        location: "B.C. coast region | Indigenous identity and language",
+        text: "Her work connects language preservation with culture, identity, youth leadership, and community strength.",
+        link: "#voice-myia",
+        risk: "At Risk",
+        method: "Workshops",
+        impact: "Youth Leadership"
+    },
+    shina: {
+        name: "Shina Nova",
+        location: "Northern Quebec / Inuit region | Inuit culture and language",
+        text: "Digital storytelling helps audiences learn about Inuit language, culture, and identity across distance.",
+        link: "#voice-shina",
+        risk: "Revitalizing",
+        method: "Digital Stories",
+        impact: "Cultural Pride"
+    },
+    grandma: {
+        name: "Grandma Sherry",
+        location: "Central / Prairie region | Elder knowledge and daily life",
+        text: "Storytelling and demonstrations show that language belongs in everyday practices, family, and community memory.",
+        link: "#voice-grandma",
+        risk: "Elder Knowledge",
+        method: "Storytelling",
+        impact: "Daily Practice"
+    }
+};
+
+const cards = document.querySelectorAll(".voice-card");
+const dots = document.querySelectorAll(".dot");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const focusName = document.querySelector("#focusName");
+const focusLocation = document.querySelector("#focusLocation");
+const focusText = document.querySelector("#focusText");
+const focusLink = document.querySelector("#focusLink");
+const focusRisk = document.querySelector("#focusRisk");
+const focusMethod = document.querySelector("#focusMethod");
+const focusImpact = document.querySelector("#focusImpact");
+const mapStatus = document.querySelector("#mapStatus");
+
+function selectVoice(voice, shouldScroll) {
+    const data = voiceData[voice];
+    if (!data) {
+        return;
+    }
+
+    focusName.textContent = data.name;
+    focusLocation.textContent = data.location;
+    focusText.textContent = data.text;
+    focusLink.href = data.link;
+    focusLink.textContent = "Jump to Voice Card";
+    focusRisk.textContent = data.risk;
+    focusMethod.textContent = data.method;
+    focusImpact.textContent = data.impact;
+    mapStatus.textContent = `Approximate region selected: ${data.name}`;
+
+    dots.forEach(dot => dot.classList.toggle("is-active", dot.dataset.voice === voice));
+    cards.forEach(card => {
+        const isSelected = card.dataset.voice === voice;
+        card.classList.toggle("is-selected", isSelected);
+        if (isSelected && shouldScroll) {
+            card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+    });
+}
+
+document.querySelectorAll(".dot, .voice-card-main").forEach(control => {
+    control.addEventListener("click", () => {
+        const shouldScroll = control.classList.contains("dot");
+        selectVoice(control.dataset.voice, !shouldScroll);
+    });
+});
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach(item => item.classList.toggle("is-active", item === button));
+        cards.forEach(card => {
+            const tags = card.dataset.tags.split(" ");
+            card.hidden = filter !== "all" && !tags.includes(filter);
+        });
+
+        const selectedCard = document.querySelector(".voice-card.is-selected");
+        if (selectedCard && selectedCard.hidden) {
+            const firstVisible = Array.from(cards).find(card => !card.hidden);
+            if (firstVisible) {
+                selectVoice(firstVisible.dataset.voice, false);
+            }
+        }
+    });
+});
+
+document.querySelector("#audioButton").addEventListener("click", () => {
+    const status = document.querySelector("#audioStatus");
+    status.textContent = "Pronunciation moment: Boozhoo means hello.";
+});
+</script>
 
 </body>
 </html>

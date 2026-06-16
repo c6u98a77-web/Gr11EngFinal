@@ -14,43 +14,164 @@
 
     <div class="hero-content">
 
-        <h1>Indigenous Languages Awareness Campaign</h1>
+        <p class="hero-kicker">TRC Call to Action #14</p>
+
+        <h1>Every language lost is a world lost.</h1>
 
         <p>
-            TRC Call to Action #14 focuses on the preservation and revitalization
-            of Indigenous languages in Canada.
+            Indigenous languages carry history, identity, land knowledge, songs,
+            stories, and ways of seeing the world.
         </p>
 
-        <a href="call.html" class="btn">Explore Call to Action</a>
+        <div class="hero-actions">
+            <a href="#risk-dashboard" class="btn">See What Is at Risk</a>
+            <a href="voices.html#creator-map" class="btn secondary-btn">Explore Voices Taking Action</a>
+        </div>
 
     </div>
 
 </header>
 
 <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="call.html">Call to Action</a>
-    <a href="timeline.html">Timeline</a>
-    <a href="research.html">Research</a>
-    <a href="voices.html">Voices</a>
-    <a href="creator.html">Creator</a>
+    <a href="index.html" data-section="Start" aria-current="page">Home</a>
+    <a href="call.html" data-section="TRC #14">Call to Action</a>
+    <a href="research.html" data-section="Evidence">Research</a>
+    <a href="voices.html#creator-map" data-section="Map + creators">Voices</a>
 </nav>
 
 <main>
 
-    <section class="card">
-        <h2>Why This Matters</h2>
-        <p>
-            Indigenous languages carry culture, identity, and history.
-            Many are endangered due to historical policies such as residential schools.
-        </p>
+    <section class="kpi-grid survival-kpis" id="risk-dashboard" aria-label="Language risk and preservation impact metrics">
+        <article class="kpi-card risk-card">
+            <span class="kpi-number">22</span>
+            <span class="kpi-label">Languages at Risk</span>
+        </article>
+        <article class="kpi-card critical-card">
+            <span class="kpi-number">3</span>
+            <span class="kpi-label">Languages With Fewer Than 100 Speakers</span>
+        </article>
+        <article class="kpi-card risk-card">
+            <span class="kpi-number">67%</span>
+            <span class="kpi-label">Fluent Speakers Over 65</span>
+        </article>
+        <article class="kpi-card hope-card">
+            <span class="kpi-number">8,426</span>
+            <span class="kpi-label">Words Saved From Being Lost</span>
+        </article>
+        <article class="kpi-card hope-card">
+            <span class="kpi-number">3,102</span>
+            <span class="kpi-label">Hours of Elder Knowledge Preserved</span>
+        </article>
+        <article class="kpi-card hope-card">
+            <span class="kpi-number">245</span>
+            <span class="kpi-label">Communities Protecting Their Language</span>
+        </article>
+    </section>
+
+    <section class="dashboard-row survival-row" aria-label="Language risk dashboard">
+        <article class="dashboard-panel risk-map-panel">
+            <p class="eyebrow">Language Risk Map</p>
+            <h2>North America Language Risk Map</h2>
+            <div class="risk-map" aria-label="Stylized map showing language risk regions">
+                <button class="risk-point critical" type="button" style="top: 36%; left: 53%;">
+                    <span>Critical<br>Fewer than 100 speakers</span>
+                </button>
+                <button class="risk-point severe" type="button" style="top: 68%; left: 17%;">
+                    <span>Severely Endangered<br>Elder speakers remain</span>
+                </button>
+                <button class="risk-point endangered" type="button" style="top: 72%; left: 39%;">
+                    <span>Endangered<br>Community classes active</span>
+                </button>
+                <button class="risk-point revitalizing" type="button" style="top: 73%; left: 61%;">
+                    <span>Revitalizing<br>Youth learners returning</span>
+                </button>
+            </div>
+            <div class="risk-legend">
+                <span class="critical">Critical</span>
+                <span class="severe">Severely Endangered</span>
+                <span class="endangered">Endangered</span>
+                <span class="revitalizing">Revitalizing</span>
+            </div>
+        </article>
+
+        <article class="dashboard-panel loss-chart-panel">
+            <p class="eyebrow">Loss vs Preservation Trend</p>
+            <h2>Crisis and Action</h2>
+            <div class="loss-chart" aria-label="Comparison chart for language risk and preservation action">
+                <div>
+                    <span class="risk-bar" style="height: 86%"></span>
+                    <p>Languages at Risk</p>
+                </div>
+                <div>
+                    <span class="hope-bar" style="height: 64%"></span>
+                    <p>Words Saved</p>
+                </div>
+                <div>
+                    <span class="hope-bar" style="height: 72%"></span>
+                    <p>Elder Knowledge Preserved</p>
+                </div>
+            </div>
+            <p class="panel-note">
+                The crisis is real, but every lesson, recording, and story keeps knowledge within reach.
+            </p>
+        </article>
+    </section>
+
+    <section class="story-feature">
+        <div>
+            <p class="eyebrow">Featured Elder Story</p>
+
+            <h2>Stories like this carry knowledge that cannot be replaced.</h2>
+
+            <p>
+            Elder knowledge holds memory of land, family, ceremony, medicine,
+            humour, and survival.
+            </p>
+
+            <!-- YouTube video embedded directly -->
+            <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/jl9wORkPYkM"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen>
+            </iframe>
+
+            <a href="voices.html#creator-map" class="btn secondary-btn">
+            Read Stories
+            </a>
+
+        </div>
     </section>
 
     <section class="card">
-        <h2>Goal of This Website</h2>
+        <h2>What We May Lose</h2>
         <p>
-            To raise awareness and support the revitalization of Indigenous languages
-            through education and media.
+            Indigenous languages carry culture, identity, history, and knowledge
+            that cannot always be translated. Residential schools and assimilation
+            policies interrupted language transmission across generations.
+        </p>
+    </section>
+
+    <section class="card image-card">
+        <img src="images/social-media-learning.jpg" alt="A person using a phone for digital learning">
+        <div>
+            <h2>How This Campaign Elevates Voices</h2>
+            <p>
+                This website highlights Indigenous creators, Elders, language keepers,
+                and organizations that help make language revitalization visible today.
+                It connects history, research, and digital media to show that Indigenous
+                languages are living languages.
+            </p>
+        </div>
+    </section>
+
+    <section class="card highlight-box">
+        <h2>What Communities Are Saving</h2>
+        <p>
+            Communities are saving words, stories, pronunciation, songs, and cultural
+            knowledge through teaching, recording, family learning, and digital media.
         </p>
     </section>
 
@@ -59,6 +180,12 @@
 <footer>
     <p>TRC Call to Action #14 Awareness Project</p>
 </footer>
+
+<script>
+document.querySelector("#homeAudioButton").addEventListener("click", () => {
+    document.querySelector("#homeAudioStatus").textContent = "Listening reminds us that language is carried by real voices.";
+});
+</script>
 
 </body>
 </html>
